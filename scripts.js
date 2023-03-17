@@ -11,7 +11,8 @@ function smileFaceRoli(){
     //skin
     fill("#00ff00")
     circle(200, 200, 100);
-    //eye
+    //right eye
     circle(220, 190, 15);
-   
+    //left eye
+   circle(180, 190, 15);
 }
