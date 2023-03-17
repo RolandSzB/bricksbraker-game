@@ -7,6 +7,8 @@ function draw() {
 
  background("#ff0000")
  smileFaceJano();
+ background("#ff5555")
+ smileFaceRoli();
 }
 
 function smileFaceJano()
@@ -39,10 +41,10 @@ function smileFaceJano()
     //
     fill("#fdda55");
     arc(200, 140, 55, 10, Math.PI, 0);
-    background("#ff5555")
+   
 
 
-smileFaceRoli();
+
 }
 
 function smileFaceRoli(){
