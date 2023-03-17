@@ -4,4 +4,4 @@ function setup() {
 
 function draw() {
  background("#ff0000")
-}
+} 
