@@ -8,11 +8,23 @@ smileFaceRoli();
 }
 
 function smileFaceRoli(){
-    //skin
-    fill("#00ff00")
+     //skin
+    fill("#00ff00");
     circle(200, 200, 100);
+ 
     //right eye
+    fill("lightblue");
     circle(220, 190, 15);
+    fill("#000000")
+    circle(220, 190, 3);
+   
     //left eye
-   circle(180, 190, 15);
+    fill("lightblue");
+    circle(180, 190, 15);
+    fill("#000000")
+    circle(180, 190, 3);
+ 
+    //mouth  
+    noFill(); 
+    arc(200, 230, 40, 15, 0, Math.PI );
 }
