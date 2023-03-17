@@ -3,10 +3,15 @@ function setup() {
 }
 
 function draw() {
- background("#00ff00")
+ background("#ff5555")
 smileFaceRoli();
 }
 
 function smileFaceRoli(){
-    circle(200, 200, 100)
+    //skin
+    fill("#00ff00")
+    circle(200, 200, 100);
+    //eye
+    circle(220, 190, 15);
+   
 }
