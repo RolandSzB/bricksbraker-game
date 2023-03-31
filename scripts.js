@@ -2,8 +2,8 @@ let moveS1X = 180;
 let moveS1Y = 50;
 let speedS1 = 10;
 rayS1 = 50;
-let moveS2X = 200;
-let moveS2Y = 200;
+let moveS2X = 220;
+let moveS2Y = 80;
 let speedS2 = 15;
 rayS2 = 50;
 
