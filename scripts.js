@@ -4,7 +4,7 @@ let speedS1 = 10;
 rayS1 = 50;
 let moveS2X = 200;
 let moveS2Y = 200;
-let speedS2 = 5;
+let speedS2 = 15;
 rayS2 = 50;
 
 let sensS1X = 1;
