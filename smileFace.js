@@ -5,28 +5,28 @@ function smileFaceJano(x, y, d) {
 
   // right eye
   fill("#000000");
-  circle(x + 20, y - 10, 25);
+  circle(x + d * 0.2, y - d * 0.1, d * 0.25);
 
   fill("ffffff");
-  circle(x + 20, y - 10, 10);
+  circle(x + d * 0.2, y - d * 0.1, d * 0.1);
 
   // left eye
   fill("ffffff");
-  circle(x - 20, y - 10, 25);
+  circle(x - d * 0.2, y - d * 0.1, d * 0.25);
 
   fill("#000000");
-  circle(x - 20, y - 10, 10);
+  circle(x - d * 0.2, y - d * 0.1, d * 0.1);
 
   // mouth
   fill("#000000");
-  arc(x, y + 10, 30, 30, 0, Math.PI);
+  arc(x + d * 0, y + d * 0.1, d * 0.3, d * 0.3, d * 0, Math.PI);
 
   fill("#ff0000");
-  arc(x, y + 20, 15, 10, 0, Math.PI);
+  arc(x + d * 0, y + d * 0.2, d * 0.15, d * 0.1, d * 00, Math.PI);
 
   //
   fill("#fdda55");
-  arc(x, y - 60, 55, 10, Math.PI, 0);
+  arc(x + d * 0, y - d * 0.6, d * 0.55, d * 0.1, Math.PI, d * 0);
 }
 
 function smileFaceRoli(x, y, d) {
@@ -36,17 +36,17 @@ function smileFaceRoli(x, y, d) {
 
   //right eye
   fill("lightblue");
-  circle(x + 20, y - 10, 15);
+  circle(x + d * 0.2, y - d * 0.1, d * 0.15);
   fill("#000000");
-  circle(x + 20, y - 10, 3);
+  circle(x + d * 0.2, y - d * 0.1, d * 0.03);
 
   //left eye
   fill("lightblue");
-  circle(x - 20, y - 10, 15);
+  circle(x - d * 0.2, y - d * 0.1, d * 0.15);
   fill("#000000");
-  circle(x - 20, y - 10, 3);
+  circle(x - d * 0.2, y - d * 0.1, d * 0.03);
 
   //mouth
   noFill();
-  arc(x, y + 30, 40, 15, 0, Math.PI);
+  arc(x + d * 0, y + d * 0.3, d * 0.4, d * 0.15, d * 0, Math.PI);
 }
