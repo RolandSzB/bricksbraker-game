@@ -2,7 +2,7 @@ const SmileFaceJano = {
   x: 260,
   y: 10,
   speed: 8,
-  ray: 30,
+  ray: 15,
   sensX: 1,
   sensY: 1,
 };
