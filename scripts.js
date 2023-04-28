@@ -5,8 +5,9 @@ function setup() {
 function draw() {
   background("#00ffff");
 
-  sensS1X = sensSmileFaceChecksX(moveS2X, rayS2, sensS2X);
-  sensS1Y = sensSmileFaceChecksY(moveS2Y, rayS2, sensS2Y);
+  sensS2X = sensSmileFaceChecksX(moveS2X, rayS2, sensS2X);
+  sensS2Y = sensSmileFaceChecksY(moveS2Y, rayS2, sensS2Y);
+
   SmileFaceRoli.sensX = sensSmileFaceChecksX(
     SmileFaceRoli.x,
     SmileFaceRoli.ray,
