@@ -50,3 +50,22 @@ function smileFaceRoli(x, y, d) {
   noFill();
   arc(x + d * 0, y + d * 0.3, d * 0.4, d * 0.15, d * 0, Math.PI);
 }
+
+function sensSmileFaceChecksX(x, r, sensInitial) {
+  if (x < limitLeft + r) {
+    return 1;
+  }
+  if (x > limitRight - r) {
+    return -1;
+  }
+  return sensInitial;
+}
+function sensSmileFaceChecksY(y, r, sensInitial) {
+  if (y < limitTop + r) {
+    return 1;
+  }
+  if (y > limitBottom - r) {
+    return -1;
+  }
+  return sensInitial;
+}

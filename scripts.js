@@ -4,45 +4,26 @@ function setup() {
 
 function draw() {
   background("#00ffff");
-  //verificare limmita Top S1
-  if (moveS1Y < limitTop + rayS1) {
-    sensS1Y = 1; //schimbare de sens
-  }
-  //verificare limmita Bottom S1
-  if (moveS1Y > limitBottom - rayS1) {
-    sensS1Y = -1; //schimbare de sens
-  }
-  //verificare limmita Left S1
-  if (moveS1X < limitLeft + rayS1) {
-    sensS1X = 1; //schimbare de sens
-  }
-  //verificare limmita Right S1
-  if (moveS1X > limitRight - rayS1) {
-    sensS1X = -1; //schimbare de sens
-  }
 
-  if (moveS2Y < limitTop + rayS2) {
-    sensS2Y = 1; //schimbare de sens
-  }
-  //verificare limmita Bottom S1
-  if (moveS2Y > limitBottom - rayS2) {
-    sensS2Y = -1; //schimbare de sens
-  }
-  //verificare limmita Left S1
-  if (moveS2X < limitLeft + rayS2) {
-    sensS2X = 1; //schimbare de sens
-  }
-  //verificare limmita Right S1
-  if (moveS2X > limitRight - rayS2) {
-    sensS2X = -1; //schimbare de sens
-  }
+  sensS1X = sensSmileFaceChecksX(moveS2X, rayS2, sensS2X);
+  sensS1Y = sensSmileFaceChecksY(moveS2Y, rayS2, sensS2Y);
+  SmileFaceRoli.sensX = sensSmileFaceChecksX(
+    SmileFaceRoli.x,
+    SmileFaceRoli.ray,
+    SmileFaceRoli.sensX
+  );
+  SmileFaceRoli.sensY = sensSmileFaceChecksX(
+    SmileFaceRoli.y,
+    SmileFaceRoli.ray,
+    SmileFaceRoli.sensY
+  );
 
-  moveS1X += sensS1X * speedS1;
-  moveS1Y += sensS1Y * speedS1;
+  SmileFaceRoli.x += SmileFaceRoli.sensX * SmileFaceRoli.speed;
+  SmileFaceRoli.y += SmileFaceRoli.sensY * SmileFaceRoli.speed;
 
   moveS2X += sensS2X * speedS2;
   moveS2Y += sensS2Y * speedS2;
 
-  smileFaceRoli(moveS1X, moveS1Y, rayS1 * 2);
+  smileFaceRoli(SmileFaceRoli.x, SmileFaceRoli.y, SmileFaceRoli.ray * 2);
   smileFaceJano(moveS2X, moveS2Y, rayS2 * 2);
 }

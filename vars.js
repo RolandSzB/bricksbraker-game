@@ -1,14 +1,25 @@
-let moveS1X = 180;
-let moveS1Y = 50;
-let speedS1 = 5;
-rayS1 = 20;
+const SmileFaceRoli = {
+  x: 180,
+  y: 100,
+  speed: 7,
+  ray: 15,
+  sensX: 1,
+  sensY: 1,
+};
+//  let moveS1X = 180;
+//  let moveS1Y = 100;
+
 let moveS2X = 260;
 let moveS2Y = 10;
-let speedS2 = 8;
-rayS2 = 30;
 
-let sensS1X = 1;
-let sensS1Y = 1;
+//let speedS1 = 7;
+let speedS2 = 4;
+
+//rayS1 = 15;
+rayS2 = 15;
+
+// let sensS1X = 1;
+// let sensS1Y = 1;
 let sensS2X = 1;
 let sensS2Y = 1;
 
