@@ -1,31 +1,51 @@
 function setup() {
   createCanvas(600, 600);
+  initBricks();
 }
 
 function draw() {
   background("#00ffff");
+
+
 
   SmileFaceJano.sensX = sensSmileFaceChecksX(
     SmileFaceJano.x,
     SmileFaceJano.ray,
     SmileFaceJano.sensX
   );
+
   SmileFaceJano.sensY = sensSmileFaceChecksY(
     SmileFaceJano.y,
     SmileFaceJano.ray,
     SmileFaceJano.sensY
   );
 
+  SmileFaceJano.sensY = bottomBarCheck(
+   SmileFaceJano
+  );
+
+  SmileFaceJano.sensY = bricksCheck(
+    SmileFaceJano
+   );
+
   SmileFaceRoli.sensX = sensSmileFaceChecksX(
     SmileFaceRoli.x,
     SmileFaceRoli.ray,
     SmileFaceRoli.sensX
   );
-  SmileFaceRoli.sensY = sensSmileFaceChecksX(
+  SmileFaceRoli.sensY = sensSmileFaceChecksY(
     SmileFaceRoli.y,
     SmileFaceRoli.ray,
     SmileFaceRoli.sensY
   );
+
+  SmileFaceRoli.sensY = bottomBarCheck(
+    SmileFaceRoli
+   );
+
+   SmileFaceRoli.sensY = bricksCheck(
+    SmileFaceRoli
+   );
 
   SmileFaceRoli.x += SmileFaceRoli.sensX * SmileFaceRoli.speed;
   SmileFaceRoli.y += SmileFaceRoli.sensY * SmileFaceRoli.speed;
@@ -35,4 +55,7 @@ function draw() {
 
   smileFaceJano(SmileFaceJano.x, SmileFaceJano.y, SmileFaceJano.ray * 2);
   smileFaceRoli(SmileFaceRoli.x, SmileFaceRoli.y, SmileFaceRoli.ray * 2);
+
+  bottomBar();
+  showBricks();
 }

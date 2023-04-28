@@ -95,8 +95,8 @@ function sensSmileFaceChecksY(y, r, sensInitial) {
   if (y < limitTop + r) {
     return 1;
   }
-  if (y > limitBottom - r) {
-    return -1;
-  }
+  //if (y > limitBottom - r) {
+  //  return -1;
+ // }
   return sensInitial;
 }
