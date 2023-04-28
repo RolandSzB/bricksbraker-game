@@ -5,9 +5,6 @@ function setup() {
 function draw() {
   background("#00ffff");
 
-  sensS1X = sensSmileFaceChecksX(moveS1X, rayS1, sensS1X);
-  sensS1Y = sensSmileFaceChecksX(moveS1Y, rayS1, sensS1Y);
-
   SmileFaceJano.sensX = sensSmileFaceChecksX(
     SmileFaceJano.x,
     SmileFaceJano.ray,
@@ -19,12 +16,23 @@ function draw() {
     SmileFaceJano.sensY
   );
 
-  moveS1X += sensS1X * speedS1;
-  moveS1Y += sensS1Y * speedS1;
+  SmileFaceRoli.sensX = sensSmileFaceChecksX(
+    SmileFaceRoli.x,
+    SmileFaceRoli.ray,
+    SmileFaceRoli.sensX
+  );
+  SmileFaceRoli.sensY = sensSmileFaceChecksX(
+    SmileFaceRoli.y,
+    SmileFaceRoli.ray,
+    SmileFaceRoli.sensY
+  );
+
+  SmileFaceRoli.x += SmileFaceRoli.sensX * SmileFaceRoli.speed;
+  SmileFaceRoli.y += SmileFaceRoli.sensY * SmileFaceRoli.speed;
 
   SmileFaceJano.x += SmileFaceJano.sensX * SmileFaceJano.speed;
   SmileFaceJano.y += SmileFaceJano.sensY * SmileFaceJano.speed;
 
-  smileFaceRoli(moveS1X, moveS1Y, rayS1 * 2);
   smileFaceJano(SmileFaceJano.x, SmileFaceJano.y, SmileFaceJano.ray * 2);
+  smileFaceRoli(SmileFaceRoli.x, SmileFaceRoli.y, SmileFaceRoli.ray * 2);
 }
